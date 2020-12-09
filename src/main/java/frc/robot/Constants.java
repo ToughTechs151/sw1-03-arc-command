@@ -1,5 +1,11 @@
 package frc.robot;
 
+/**
+ * We continue on in the same style, creating new subclasses for 
+ * related constants. This time we are adding an autonomous command
+ * to run during the autonomous period, so we make a AutoConstants
+ * class to hold them. 
+ **/
 public final class Constants {
     public static final class DriveConstants {
         public static final int kLeftMotorPort = 0;
