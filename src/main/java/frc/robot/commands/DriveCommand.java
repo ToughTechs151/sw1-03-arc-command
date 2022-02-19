@@ -1,6 +1,6 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.GenericHID;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveSubsystem;
 
@@ -12,7 +12,7 @@ import frc.robot.subsystems.DriveSubsystem;
  **/
 public class DriveCommand extends CommandBase {
     private final DriveSubsystem m_subsystem;
-    private final GenericHID m_stick;
+    private final Joystick m_stick;
     private double fwd;
     private double rot;
     
@@ -24,13 +24,13 @@ public class DriveCommand extends CommandBase {
      * need. And finally we zero out the old values from autonmous, 
      * if any. We don't want them hanging around causing confusion.
      **/
-    public DriveCommand(DriveSubsystem subsystem, GenericHID stick) {
+    public DriveCommand(DriveSubsystem subsystem, Joystick stick) {
         m_subsystem = subsystem;
         m_stick = stick;
         addRequirements(subsystem);
         fwd = 0.0;
         rot = 0.0;
-    };
+    }
     /**
      * In this case we do the same thing as we did above, but instead of a 
      * joystick, we get the two constants we want to set the motor to. Notice
